@@ -13,22 +13,62 @@
         <div class="geolocation_section">
           <h3 class="date_now"></h3>
           <div class="where_user_is">
-            <span class="location"></span>
+            <span class="city_name">Location</span>
             <div class="divider"></div>
-            <span class="temperature"></span>
+            <span class="city_weather">weather -℃</span>
           </div>
         </div>
         <h1 class="time">00:00</h1>
       </div>
       <div id="greeting">
+        <form action="" class="hidden">
+          <input type="text" / placeholder="Insert Your Name :)">
+        </form>
         <h2></h2>
       </div>
     </header>
     <footer>
       <span class="quote"></span>
+      <span class="author"></span>
       <div class="slider"></div>
     </footer>
-    <aside></aside>
-    <script src="./js/geolocation.js"></script>
+    <aside id="function_panel">
+      <article class="to_do"></article>
+      <article class="words"></article>
+      <article class="bg_image"></article>
+    </aside>
+    <script src="./js/timeGeolocation.js"></script>
+    <script src="./js/greeting.js"></script>
+    <script src="./js/quote.js"></script>
+    <script src="./js/background.js"></script>
   </body>
 </html>
+
+<!-- 
+    구현해야 될 기능 3.24:
+    1. 날짜 (done)
+    2. 시간 (done)
+
+    3. 지역 위치 (done)
+    4. 온도 (done)
+
+    5. 이름 입력 후 입력창 사라짐 (done)
+    6. 이름 표시 (done)
+    7. 시간에 따라 다른 인사 (done)
+
+    8. 랜덤 디폴트 바뀌는 배경화면 기능 (done)
+    9. 명언 기능
+
+    10. 배경화면 사용자 수정
+    11. 이름 수정 기능
+    12. 날씨/위치 재조정 기능
+    13. 배경화면 바꾸기 기능
+    
+    14. 링크 보관 기능
+    15. To-Do 기능
+    16. 단어장 기능
+        1. 단어를 추가할 수 있다.
+        2. 단어를 저장할 수 있다.
+        3. 단어를 삭제할 수 있다.
+        4. 단어를 수정할 수 있다.
+-->

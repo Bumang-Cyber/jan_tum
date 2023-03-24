@@ -1,5 +1,6 @@
 @import "./reset.css";
-@import "./geolocation.css";
+@import "./timeGeolocation.css";
+@import "./greeting.css";
 
 @font-face {
   font-family: "Pretendard-Regular";
@@ -25,7 +26,4 @@ h3 {
   font-size: 24px;
   font-weight: 400px;
   letter-spacing: -0.5px;
-}
-
-h4 {
 }
