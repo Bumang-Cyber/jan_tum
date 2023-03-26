@@ -20,9 +20,9 @@ function paintName() {
 
   if (4 < hour && hour < 12) {
     hello = "Good Morning";
-  } else if (11 < hour && hour < 18) {
+  } else if (11 < hour && hour < 16) {
     hello = "Good Afternoon";
-  } else if (17 < hour && hour < 24) {
+  } else if (17 < hour && hour < 20) {
     hello = "Good Evening";
   } else {
     hello = "Sweet Dream";
