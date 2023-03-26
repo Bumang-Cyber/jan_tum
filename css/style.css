@@ -43,3 +43,19 @@
   /* Support for IE. */
   font-feature-settings: "liga";
 }
+
+/* article .blur {
+  width: 100vw;
+  height: 100vh;
+  box-shadow: inset 0 0 50px 300px var(--gray800);
+} */
+
+.blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  box-shadow: inset 0 0 6000px 150px rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}

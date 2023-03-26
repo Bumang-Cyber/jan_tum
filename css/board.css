@@ -41,10 +41,12 @@ header {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  text-shadow: 0 0 80px var(--gray900);
 }
 
 .hidden {
   display: none;
+  visibility: hidden;
 }
 
 #geolocation {
@@ -92,6 +94,10 @@ header {
   justify-content: center;
 }
 
+.greeting-aside-margin {
+  margin-right: 180px;
+}
+
 #greeting input {
   border: none;
   font-size: 40px;
@@ -120,6 +126,7 @@ footer {
 .quote {
   font-size: 18px;
   font-weight: 400;
+  text-shadow: 0 0 32px var(--gray900);
 }
 
 .author {
@@ -127,12 +134,13 @@ footer {
   font-size: 16px;
   font-weight: 600;
   color: var(--gray300);
+  text-shadow: 0 0 32px var(--gray900);
 }
 
 .bgImage {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  z-index: -1;
+  z-index: -2;
   object-fit: cover;
 }

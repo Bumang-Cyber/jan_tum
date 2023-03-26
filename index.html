@@ -26,7 +26,7 @@
           <h1 class="time">00:00</h1>
         </div>
       </div>
-      <div id="greeting">
+      <div id="greeting" class="greeting-aside-margin">
         <form action="" class="hidden">
           <input type="text" maxlength="10" placeholder="Insert Your Name" />
         </form>
@@ -45,7 +45,12 @@
         아래서부턴 우측 사이드바
 
     -->
-    <aside id="tool_box">
+    <section id="tool_box" class="menu_off">
+      <div class="icon_big">
+        <span class="material-icons-outlined"> menu_open </span>
+      </div>
+    </section>
+    <aside id="tool_box" class="menu_on">
       <section class="contents_panel">
         <div id="words" class="hidden">
           <div class="tab_area">
@@ -73,11 +78,11 @@
          -->
         <div id="todo">
           <div class="tab_area__todo">
-            <span>Jan 01, 2023</span>
+            <span>To-Do Jan 01, 2023</span>
           </div>
           <div class="input_area input_area__todo">
             <div class="input_box__word input_box__todo">
-              <span>To-Do</span>
+              <span>New todo</span>
               <input type="text" />
             </div>
           </div>
@@ -101,11 +106,14 @@
         <div class="icon_big">
           <span class="material-icons-outlined"> fact_check </span>
         </div>
+        <!-- 
+            커스텀 이미지 설정 기능은 일단 보류. (선결과제: Node.JS)
         <div class="icon_big">
           <span class="material-icons-outlined"> wallpaper </span>
-        </div>
+        </div> -->
       </div>
     </aside>
+    <article class="blur"></article>
     <script src="./js/timeGeolocation.js"></script>
     <script src="./js/greeting.js"></script>
     <script src="./js/quote.js"></script>
@@ -132,23 +140,27 @@
 
     10. 사이드 네비게이터 css 구현 (done)
     11. 사이드 네비게이터 내 기능 전환 기능 (todo)
-    12. 사이드 네비게이터 소멸/전환 기능
-        13. board 비율 네비게이터에 의해 반응하기
-    14. 마지막으로 열었던 탭 저장하기
-    15. To-Do 기능 
+    12. 사이드 네비게이터 소멸/전환 기능  (done)
+        13. board 비율 네비게이터에 의해 반응하기 (done)
+    14. 마지막으로 열었던 탭 저장하기 (done)
+    15. dim 추가하기 (텍스트 쉐도우?, 양옆 쉐도우) (done)
+
+    16. To-Do 기능 
         1. toDo를 추가할 수 있다.
         2. toDo를 저장할 수 있다.
         3. toDo를 삭제할 수 있다.
         4. toDo를 수정할 수 있다.
-    16. 단어장 기능
+    17. 단어장 기능
         1. 단어를 추가할 수 있다.
         2. 단어를 저장할 수 있다.
         3. 단어를 삭제할 수 있다.
         4. 단어를 수정할 수 있다.
 
-    17. 배경화면 바꾸기 기능
-    18. 배경화면 사용자 수정
-    19. 이름 수정 기능
-    20. 날씨/위치 재조정 기능
-    21. 링크 보관 기능
--->
+        20. 이름 수정 기능
+        21. 날씨/위치 재조정 기능
+        22. 링크 보관 기능
+        
+        선결과제 Node.Js... 아마도?
+        -. 배경화면 바꾸기 기능
+        -. 배경화면 사용자 수정
+    -->

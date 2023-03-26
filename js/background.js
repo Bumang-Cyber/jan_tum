@@ -1,15 +1,15 @@
 const bgImage = document.createElement("img");
 const images = [
   "1.jpeg",
-  "2.jpeg",
+  "2.jpg",
   "3.jpeg",
-  "4.jpeg",
+  "4.jpg",
   "5.jpg",
   "6.jpg",
-  "7.png",
-  "8.png",
-  "9.png",
-  "10.png",
+  "7.jpg",
+  "8.jpg",
+  "9.jpg",
+  "10.jpg",
   "11.jpg",
   "12.jpg",
   "13.jpg",
@@ -19,9 +19,6 @@ const images = [
   "17.jpg",
   "18.jpg",
   "19.jpg",
-  "20.jpeg",
-  "21.jpeg",
-  "22.jpeg",
 ];
 const chosenImage = images[Math.floor(Math.random() * images.length)];
 

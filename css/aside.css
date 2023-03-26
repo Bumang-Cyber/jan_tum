@@ -1,11 +1,9 @@
 #tool_box {
   display: flex;
   background-color: white;
-  width: 290px;
-  height: 90vh;
   position: fixed;
   right: 40px;
-  top: 40px;
+  top: 72px;
   color: var(--gray400);
   border-radius: 12px;
 }
@@ -27,7 +25,7 @@
 }
 
 .function_panel div {
-  margin-top: 16px;
+  margin-top: 12px;
   color: var(--gray300);
 }
 
@@ -38,4 +36,24 @@
 
 .focused {
   color: var(--gray900);
+}
+
+.menu_on {
+  width: 290px;
+  height: 70vh;
+}
+
+.menu_off {
+  width: 64px;
+  height: 64px;
+  justify-content: center;
+  opacity: 0.2;
+}
+
+.menu_off div {
+  margin-top: 12px;
+}
+
+.menu_off:hover {
+  opacity: 1;
 }
