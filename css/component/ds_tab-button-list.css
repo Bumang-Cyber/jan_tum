@@ -1,0 +1,22 @@
+.ds_tab-button-list__default {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 22px;
+  padding: 0 22px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--gray400);
+}
+
+.ds_tab-button-list__clicked {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 22px;
+  padding: 0 22px;
+  border-bottom: 2px solid var(--black);
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+}

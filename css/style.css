@@ -1,6 +1,15 @@
 @import "./reset.css";
-@import "./timeGeolocation.css";
-@import "./greeting.css";
+@import "./variables.css";
+@import "./board.css";
+
+@import "./aside.css";
+
+/*aside 안의 내용물*/
+@import "./function/aside-word.css";
+@import "./function/aside-todo.css";
+
+/*컴포넌트*/
+@import "./component/ds_tab-button-list.css";
 
 @font-face {
   font-family: "Pretendard-Regular";
@@ -10,20 +19,27 @@
   font-style: normal;
 }
 
-h1 {
-  font-size: 62px;
-  font-weight: 500;
-  letter-spacing: -1px;
-}
+.material-icons-outlined {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 40px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
 
-h2 {
-  font-size: 40px;
-  font-weight: 500;
-  letter-spacing: -0.8px;
-}
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
 
-h3 {
-  font-size: 24px;
-  font-weight: 400px;
-  letter-spacing: -0.5px;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
 }

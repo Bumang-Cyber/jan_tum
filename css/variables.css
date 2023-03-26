@@ -1,0 +1,18 @@
+:root {
+  /*컬러 정의 root*/
+  --black: #000000;
+  --gray900: #2a2a2d;
+  --gray800: #414447;
+  --gray700: #626669;
+  --gray600: #7f848a;
+  --gray500: #9fa5ac;
+  --gray400: #c7cdd1;
+  --gray300: #e5e9ed;
+  --gray200: #f1f5f8;
+  --gray100: #f3f6f8;
+  --grayBG: #f9f9fa;
+  --white: #ffffff;
+
+  /*마진 정의*/
+  --horizontal-space: 24px;
+}

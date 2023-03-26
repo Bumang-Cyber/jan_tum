@@ -1,0 +1,41 @@
+#tool_box {
+  display: flex;
+  background-color: white;
+  width: 290px;
+  height: 90vh;
+  position: fixed;
+  right: 40px;
+  top: 40px;
+  color: var(--gray400);
+  border-radius: 12px;
+}
+
+.contents_panel {
+  width: 226px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 12px;
+}
+
+.function_panel {
+  width: 64px;
+  border-left: 1px solid var(--gray200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.function_panel div {
+  margin-top: 16px;
+  color: var(--gray300);
+}
+
+.icon_big :hover {
+  background-color: var(--gray100);
+  color: var(--gray500);
+}
+
+.focused {
+  color: var(--gray900);
+}

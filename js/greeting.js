@@ -25,7 +25,7 @@ function paintName() {
   } else if (17 < hour && hour < 24) {
     hello = "Good Evening";
   } else {
-    hello = "Have a Good Dream";
+    hello = "Sweet Dream";
   }
 
   sayHelloName.innerText = `${hello}, ${localSavedName}`;
@@ -33,6 +33,7 @@ function paintName() {
 
 if (localSavedName === null) {
   nameForm.classList.remove("hidden");
+  sayHelloName.classList.add("hidden");
   nameForm.addEventListener("submit", saveName);
 } else {
   paintName();

@@ -1,0 +1,138 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  color: var(--white);
+}
+
+h1 {
+  font-size: 62px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  transform: translate(0, 4px);
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: -0.8px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 400px;
+  letter-spacing: -0.5px;
+}
+
+header {
+  margin: 80px auto;
+  width: 1056px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+#geolocation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#geolocation > div:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.where_user_is {
+  display: flex;
+  margin-top: 8px;
+  align-items: center;
+}
+
+.city_name,
+.divider,
+.city_weather {
+  margin-right: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+}
+
+.divider {
+  height: 12px;
+  width: 1px;
+  background-color: var(--white);
+  opacity: 0.5;
+  transform: translate(0, -1px);
+}
+
+.time {
+  margin-left: 32px;
+}
+
+#greeting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#greeting input {
+  border: none;
+  font-size: 40px;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: right;
+  color: var(--white);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  position: absolute;
+  margin-bottom: 64px;
+}
+
+.quote,
+.author {
+  display: flex;
+  justify-content: center;
+}
+
+.quote {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.author {
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray300);
+}
+
+.bgImage {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  object-fit: cover;
+}

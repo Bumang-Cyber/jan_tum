@@ -1,0 +1,27 @@
+/*여기서부터는*/
+/*할 일 리스트 영역*/
+
+.tab_area__todo {
+  display: flex;
+  margin-left: 18px;
+  align-items: flex-end;
+  height: 35px;
+  width: inherit;
+  background-color: var(--white);
+  border-top-left-radius: 12px;
+  color: var(--gray700);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.tab_area__todo > span {
+  margin-bottom: 4px;
+}
+
+.input_area__todo {
+  height: 90px;
+}
+
+.input_box__todo {
+  justify-content: flex-start;
+}

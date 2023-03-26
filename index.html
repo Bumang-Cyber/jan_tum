@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>New Tab</title>
   </head>
   <body>
@@ -18,13 +22,16 @@
             <span class="city_weather">weather -℃</span>
           </div>
         </div>
-        <h1 class="time">00:00</h1>
+        <div>
+          <h1 class="time">00:00</h1>
+        </div>
       </div>
       <div id="greeting">
         <form action="" class="hidden">
-          <input type="text" / placeholder="Insert Your Name :)">
+          <input type="text" maxlength="10" placeholder="Insert Your Name" />
         </form>
         <h2></h2>
+        <!--이름-->
       </div>
     </header>
     <footer>
@@ -32,15 +39,78 @@
       <span class="author"></span>
       <div class="slider"></div>
     </footer>
-    <aside id="function_panel">
-      <article class="to_do"></article>
-      <article class="words"></article>
-      <article class="bg_image"></article>
+    <!--
+
+        위쪽은 board 내 정보
+        아래서부턴 우측 사이드바
+
+    -->
+    <aside id="tool_box">
+      <section class="contents_panel">
+        <div id="words" class="hidden">
+          <div class="tab_area">
+            <a href="#" class="ds_tab-button-list__default">English</a>
+            <a href="#" class="ds_tab-button-list__default">Japanese</a>
+          </div>
+          <div class="input_area">
+            <div>
+              <div class="input_box__word">
+                <span>Word</span>
+                <input type="text" />
+              </div>
+              <div class="input_box__word">
+                <span>Description</span>
+                <input type="text" />
+              </div>
+            </div>
+          </div>
+          <div class="word_area"></div>
+        </div>
+        <!-- 
+
+            아래부터는 To-Do list 만드는 곳입니다..
+
+         -->
+        <div id="todo">
+          <div class="tab_area__todo">
+            <span>Jan 01, 2023</span>
+          </div>
+          <div class="input_area input_area__todo">
+            <div class="input_box__word input_box__todo">
+              <span>To-Do</span>
+              <input type="text" />
+            </div>
+          </div>
+          <div class="todos_area"></div>
+        </div>
+        <!-- <div id="background"></div> -->
+      </section>
+      <!--
+
+        아래서부터는 아이콘 영역
+        function_panel
+
+      -->
+      <div class="function_panel">
+        <div class="icon_big">
+          <span class="material-icons-outlined"> menu_open </span>
+        </div>
+        <div class="icon_big">
+          <span class="material-icons-outlined"> translate </span>
+        </div>
+        <div class="icon_big">
+          <span class="material-icons-outlined"> fact_check </span>
+        </div>
+        <div class="icon_big">
+          <span class="material-icons-outlined"> wallpaper </span>
+        </div>
+      </div>
     </aside>
     <script src="./js/timeGeolocation.js"></script>
     <script src="./js/greeting.js"></script>
     <script src="./js/quote.js"></script>
     <script src="./js/background.js"></script>
+    <script src="./js/asideNavigator.js"></script>
   </body>
 </html>
 
@@ -57,18 +127,28 @@
     7. 시간에 따라 다른 인사 (done)
 
     8. 랜덤 디폴트 바뀌는 배경화면 기능 (done)
-    9. 명언 기능
+    9. 명언 기능 (done)
 
-    10. 배경화면 사용자 수정
-    11. 이름 수정 기능
-    12. 날씨/위치 재조정 기능
-    13. 배경화면 바꾸기 기능
-    
-    14. 링크 보관 기능
-    15. To-Do 기능
+
+    10. 사이드 네비게이터 css 구현 (done)
+    11. 사이드 네비게이터 내 기능 전환 기능 (todo)
+    12. 사이드 네비게이터 소멸/전환 기능
+        13. board 비율 네비게이터에 의해 반응하기
+    14. 마지막으로 열었던 탭 저장하기
+    15. To-Do 기능 
+        1. toDo를 추가할 수 있다.
+        2. toDo를 저장할 수 있다.
+        3. toDo를 삭제할 수 있다.
+        4. toDo를 수정할 수 있다.
     16. 단어장 기능
         1. 단어를 추가할 수 있다.
         2. 단어를 저장할 수 있다.
         3. 단어를 삭제할 수 있다.
         4. 단어를 수정할 수 있다.
+
+    17. 배경화면 바꾸기 기능
+    18. 배경화면 사용자 수정
+    19. 이름 수정 기능
+    20. 날씨/위치 재조정 기능
+    21. 링크 보관 기능
 -->
