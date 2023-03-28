@@ -31,7 +31,12 @@ function onOffIconClicked() {
   wordsIcon.classList.toggle("hidden");
   toDoIcon.classList.toggle("hidden");
   toolBox.classList.toggle("hidden");
-  greetingMargin.classList.toggle("greeting-aside-margin");
+  if (window.innerWidth <= 1725) {
+    greetingMargin.classList.add("greeting-aside-margin");
+  } else {
+    greetingMargin.classList.remove("greeting-aside-margin");
+  }
+  //차라리 윈도우에 반응해서 줄어드는 로직으로 처리할지 고민하기
 }
 
 function wordsIconClicked() {

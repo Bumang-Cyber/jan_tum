@@ -58,6 +58,11 @@
     </section>
     <aside id="tool_box" class="menu_on">
       <section class="contents_panel">
+        <!--
+            
+          - 아래부터는 words 단어장 만드는 곳입니다.
+
+        -->
         <div id="words" class="hidden">
           <div class="tab_area">
             <a href="#" class="ds_tab-button-list__default">English</a>
@@ -67,11 +72,11 @@
             <div>
               <div class="input_box__word">
                 <span>Word</span>
-                <input type="text" />
+                <input type="text" maxlength="30" />
               </div>
               <div class="input_box__word">
                 <span>Description</span>
-                <input type="text" />
+                <input type="text" maxlength="30" />
               </div>
             </div>
           </div>
@@ -79,7 +84,7 @@
         </div>
         <!-- 
 
-            아래부터는 To-Do list 만드는 곳입니다..
+            아래부터는 To-Do list 만드는 곳입니다.
 
          -->
         <div id="todo">
@@ -88,11 +93,31 @@
           </div>
           <div class="input_area input_area__todo">
             <div class="input_box__word input_box__todo">
-              <span>New todo</span>
-              <input type="text" />
+              <form action="">
+                <span>New todo</span>
+                <input type="text" class="todo_input" maxlength="30" />
+              </form>
             </div>
           </div>
-          <div class="todos_area"></div>
+          <div class="todos_area">
+            <!--
+              새로 추가되는 div의 형식
+              <div class="new_todo_div"> 
+                <div class="new_todo_div__first_row">
+                  <span class="new_todo_div__order"></span>
+                  <div class="new_todo_div__icon_area">
+                    <span></span>  new_todo_div__modify
+                    <span></span>  new_todo_div__delete
+                  </div>
+                </div>
+                <span class="new_todo_div__todo_contents"></span>
+                <div class="new_todo_div__checkbox_area">
+                  <input class="new_todo_div__checkbox_input" type="checkbox">
+                  <span><span>
+                </div>
+              </div>
+            -->
+          </div>
         </div>
         <!-- <div id="background"></div> -->
       </section>
@@ -125,6 +150,8 @@
     <script src="./js/quote.js"></script>
     <script src="./js/background.js"></script>
     <script src="./js/asideNavigator.js"></script>
+    <script src="./js/todo.js"></script>
+    <script src="./js/words.js"></script>
   </body>
 </html>
 
@@ -152,21 +179,24 @@
     15. dim 추가하기 (텍스트 쉐도우?, 양옆 쉐도우) (done)
 
     16. To-Do 기능 
-        1. toDo를 추가할 수 있다.
-        2. toDo를 저장할 수 있다.
-        3. toDo를 삭제할 수 있다.
-        4. toDo를 수정할 수 있다.
+        0. newDiv css 추가되는 것을 만든다. (done)
+        1. toDo를 추가할 수 있다, CSS 노가다 (done)
+        2. toDo를 저장할 수 있다. (done)
+        3. toDo를 삭제할 수 있다. (done)
+        4. toDo를 수정할 수 있다. (3/4 done) 3/28
+        5. toDo가 많이 추가되면 스크롤이 생긴다. (done)
     17. 단어장 기능
-        1. 단어를 추가할 수 있다.
-        2. 단어를 저장할 수 있다.
-        3. 단어를 삭제할 수 있다.
-        4. 단어를 수정할 수 있다.
+        0. newDiv css 추가되는 것을 만든다. 3/28
+        1. 단어를 추가할 수 있다. 3/28
+        2. 단어를 저장할 수 있다. 3/29
+        3. 단어를 삭제할 수 있다. 3/29
+        4. 단어를 수정할 수 있다. 3/29
 
-        20. 이름 수정 기능
-        21. 날씨/위치 재조정 기능
-        22. 링크 보관 기능
+        18. 이름 수정 기능 3/28
+        19. 날씨/위치 재조정 기능 3/28
         
         선결과제 Node.Js... 아마도?
         -. 배경화면 바꾸기 기능
         -. 배경화면 사용자 수정
+        -. 링크 보관 기능
     -->

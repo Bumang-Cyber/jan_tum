@@ -49,3 +49,21 @@
   flex: 1 0 auto;
   overflow-y: visible;
 }
+
+.input_box__word form {
+  display: flex;
+  flex-direction: column;
+}
+
+/*단지 수정기능에 쓰이는 코드..*/
+.new_input {
+  height: 23px;
+  width: 180px;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  border-bottom: 1px solid var(--gray400);
+}
+
+.new_input:hover {
+  border-bottom: 1px solid var(--gray700);
+}

@@ -78,7 +78,8 @@ function saveLocationTemp(cityName, cityWeather) {
   console.log("this is citynameandweather" + cityName + cityWeather);
 }
 
-function getLocationTempError() {
+function getLocationTempError(error) {
+  console.log(error);
   cityName.innerText = "Location not found";
   cityWeather.innerText = "weather -℃";
 }
@@ -86,7 +87,8 @@ function getLocationTempError() {
 if (localStorage.getItem("cityName") === null) {
   navigator.geolocation.getCurrentPosition(
     getLocationTemp,
-    getLocationTempError
+    getLocationTempError,
+    { timeout: 10000 }
   );
 } else {
   cityName.innerText = localStorage.getItem("cityName");

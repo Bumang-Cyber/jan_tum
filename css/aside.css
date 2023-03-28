@@ -11,7 +11,7 @@
 
 .contents_panel {
   width: 226px;
-  height: 100vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   border-top-left-radius: 12px;
@@ -27,6 +27,7 @@
 
 .function_panel div {
   margin-top: 12px;
+  font-size: 40px;
   color: var(--gray300);
 }
 
@@ -49,6 +50,7 @@
   height: 64px;
   justify-content: center;
   opacity: 0.2;
+  font-size: 40px;
 }
 
 .menu_off div {

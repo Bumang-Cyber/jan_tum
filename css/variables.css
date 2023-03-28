@@ -13,6 +13,16 @@
   --grayBG: #f9f9fa;
   --white: #ffffff;
 
+  --blue900: #155ac5;
+  --blue800: #3a7bdf;
+  --blue700: #6195e6;
+  --blue600: #9dbdef;
+  --blue500: #a9cbff;
+  --blue400: #c8deff;
+  --blue300: #e5f0ff;
+  --blue200: #f4f9ff;
+  --blue100: #fafcff;
+
   /*마진 정의*/
   --horizontal-space: 24px;
 }
