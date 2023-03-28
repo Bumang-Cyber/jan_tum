@@ -105,17 +105,14 @@ function paintToDo(newToDoObj) {
 
 function modifyToDo(event) {
   count = count + 1;
-  console.log(count);
   if (count % 2 !== 0) {
     const targetDiv = event.target.parentElement.parentElement.parentElement;
-    let targetText =
-      event.target.parentElement.parentElement.parentElement.querySelector(
-        ".new_todo_div__todo_contents"
-      );
+    let targetText = targetDiv.querySelector(".new_todo_div__todo_contents");
 
     targetText.innerText = "";
     const newForm = document.createElement("form");
     const newText = document.createElement("input");
+    //새로운 인풋이 나와서 수정되는 값을 수집
     newText.classList.add("new_input");
     newForm.appendChild(newText);
     targetDiv.appendChild(newForm);
@@ -124,16 +121,25 @@ function modifyToDo(event) {
 
     function completeModifyToDo(event) {
       event.preventDefault();
-      let newNewText = newText.value;
+      let reNewText = newText.value;
       newForm.remove();
-      targetText.innerText = `${newNewText}, 라고 로컬스토리지에도 수정해야되는데..)`;
+      targetText.innerText = reNewText;
+      let sorted = toDos.filter((item) => item.id === parseInt(targetDiv.id));
+      console.log(sorted);
+      let exceptSorted = toDos.filter(
+        (item) => item.id !== parseInt(targetDiv.id)
+      );
+      sorted = sorted[0];
+      sorted.text = newText.value;
+      exceptSorted.push(sorted);
+      toDos = exceptSorted;
+      saveToDo();
+
       //필터로 같은 것만 찾아내서 text 변경시키기 시도..
       count = count + 1;
-      console.log(count);
     }
   } else {
     count = count + 1;
-    console.log(count);
   }
 }
 
