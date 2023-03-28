@@ -131,7 +131,6 @@ function modifyToDo(event) {
       sorted = sorted[0];
       sorted.text = newText.value;
       toDosIndex = toDos.indexOf(sorted, 0);
-      console.log(toDosIndex, typeof toDosIndex);
       toDos[toDosIndex] = sorted;
       saveToDo();
 
