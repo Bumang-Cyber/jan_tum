@@ -125,17 +125,16 @@ function modifyToDo(event) {
       newForm.remove();
       targetText.innerText = reNewText;
       let sorted = toDos.filter((item) => item.id === parseInt(targetDiv.id));
-      console.log(sorted);
       let exceptSorted = toDos.filter(
         (item) => item.id !== parseInt(targetDiv.id)
       );
       sorted = sorted[0];
       sorted.text = newText.value;
-      exceptSorted.push(sorted);
-      toDos = exceptSorted;
+      toDosIndex = toDos.indexOf(sorted, 0);
+      console.log(toDosIndex, typeof toDosIndex);
+      toDos[toDosIndex] = sorted;
       saveToDo();
 
-      //필터로 같은 것만 찾아내서 text 변경시키기 시도..
       count = count + 1;
     }
   } else {
