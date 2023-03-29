@@ -65,22 +65,39 @@
         -->
         <div id="words" class="hidden">
           <div class="tab_area">
-            <a href="#" class="ds_tab-button-list__default">English</a>
-            <a href="#" class="ds_tab-button-list__default">Japanese</a>
+            <a href="#" class="tab-button__default tab-button__clicked"
+              >English</a
+            >
+            <a href="#" class="tab-button__default">Japanese</a>
           </div>
           <div class="input_area">
-            <div>
+            <form>
               <div class="input_box__word">
                 <span>Word</span>
-                <input type="text" maxlength="30" />
+                <input type="text" class="word_input" maxlength="30" />
               </div>
               <div class="input_box__word">
                 <span>Description</span>
-                <input type="text" maxlength="30" />
+                <input type="text" class="desc_input"" maxlength="30" />
               </div>
-            </div>
+              <input type="submit" />
+            </form>
           </div>
-          <div class="word_area"></div>
+          <div class="word_area__eng">
+            <!--
+            <div class="new_word_layout">
+              <div class="new_word_firstrow">
+                <span class="new_word_title"></span>
+                <div class="new_word_iconset">
+                  <span class="material-icons-outlined new_word__modify">edit</span>
+                  <span class="material-icons-outlined new_word__delete">close</span>
+                </div>
+              </div class="new_word_Desc">
+              <span class=""></span>
+            </div>
+            -->
+          </div>
+          <div class="word_area__jpn hidden"></div>
         </div>
         <!-- 
 
@@ -101,7 +118,7 @@
           </div>
           <div class="todos_area">
             <!--
-              새로 추가되는 div의 형식
+              새로 추가되는 To-do list div의 형식
               <div class="new_todo_div"> 
                 <div class="new_todo_div__first_row">
                   <span class="new_todo_div__order"></span>
@@ -184,17 +201,22 @@
         2. toDo를 저장할 수 있다. (done)
         3. toDo를 삭제할 수 있다. (done)
         4. toDo를 수정할 수 있다. (done) 3/28
-        5. toDo가 많이 추가되면 스크롤이 생긴다. (done)
+        5. toDo 수정 시, 텍스트 인풋에 텍스트가 유지된다 (done) 3/29
+        6. toDo가 많이 추가되면 스크롤이 생긴다. (done)
     17. 단어장 기능
-        0. newDiv css 추가되는 것을 만든다. 3/28
-        1. 단어를 추가할 수 있다. 3/28
-        2. 단어를 저장할 수 있다. 3/29
-        3. 단어를 삭제할 수 있다. 3/29
-        4. 단어를 수정할 수 있다. 3/29
+        0. 탭버튼 전환할 수 있다. (done)
+        1. newDiv css 추가되는 것을 만든다. (done) 3/28
+        2. 단어를 추가할 수 있다. (done) 3/28
+        3. 단어를 저장할 수 있다. (done) 3/29
+        4. 저장한 단어를 페이지 진입 시 받아온다 (done) 3/29
+        5. 일본어와 영어를 따로 가져와야한다..! (done)
+        6. 단어를 삭제할 수 있다. 3/29 
+        7. 단어를 수정할 수 있다. 3/29 
 
         18. 이름 수정 기능 3/28
         19. 날씨/위치 재조정 기능 3/28
-        20. 넘버링 바꾸기
+        20. todo 넘버링 바꾸기
+        21. 수정기능 고도화
         
         선결과제 Node.Js... 아마도?
         -. 배경화면 바꾸기 기능

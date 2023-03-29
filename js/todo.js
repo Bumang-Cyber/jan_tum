@@ -77,7 +77,7 @@ function paintToDo(newToDoObj) {
   //실제 html에 추가
   todoListArea.prepend(newTodoDiv);
 
-  //setNumberingOnTodo()
+  //넘버링 수정 setNumberingOnTodo()
   newTodoDiv__order.innerText = "1.";
 
   function switchDone() {
@@ -109,11 +109,12 @@ function modifyToDo(event) {
     const targetDiv = event.target.parentElement.parentElement.parentElement;
     let targetText = targetDiv.querySelector(".new_todo_div__todo_contents");
 
-    targetText.innerText = "";
     const newForm = document.createElement("form");
     const newText = document.createElement("input");
     //새로운 인풋이 나와서 수정되는 값을 수집
     newText.classList.add("new_input");
+    newText.value = targetText.innerText;
+    targetText.innerText = "";
     newForm.appendChild(newText);
     targetDiv.appendChild(newForm);
 

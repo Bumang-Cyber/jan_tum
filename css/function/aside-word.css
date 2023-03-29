@@ -14,7 +14,7 @@
   border-bottom: 1px solid var(--gray200);
 }
 
-.input_area > div {
+.input_area form {
   width: 206px;
   height: 96px;
   margin: 16px 10px 32px 10px;
@@ -45,11 +45,17 @@
   border-bottom: 1px solid var(--gray700);
 }
 
-.word_area {
+.word_area__eng {
   flex: 1 0 auto;
   overflow-y: visible;
 }
 
+.word_area__jpn {
+  flex: 1 0 auto;
+  overflow-y: visible;
+}
+
+/*to-do list에서 쓰인 거*/
 .input_box__word form {
   display: flex;
   flex-direction: column;
@@ -59,11 +65,76 @@
 .new_input {
   height: 23px;
   width: 180px;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 4);
   border: none;
   border-bottom: 1px solid var(--gray400);
 }
 
 .new_input:hover {
   border-bottom: 1px solid var(--gray700);
+}
+
+/*
+아래는 탭버튼
+*/
+
+.tab-button__default {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 22px;
+  padding: 0 22px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--gray400);
+}
+
+.tab-button__clicked {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 22px;
+  padding: 0 22px;
+  border-bottom: 2px solid var(--black);
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+}
+
+input[type="submit"] {
+  display: none;
+}
+
+/*
+  newWord css 만드는 곳
+*/
+
+.new_word_layout {
+  width: 100%;
+  height: 72px;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--gray200);
+}
+
+.new_word_firstrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 12px 2px 12px;
+}
+
+.new_word_title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.new_word_Delete {
+  margin-left: 8px;
+}
+
+.new_word_Desc {
+  margin: 0 12px;
+  color: var(--black);
 }
