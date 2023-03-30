@@ -52,6 +52,6 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  box-shadow: inset 0 0 6000px 150px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 1000000px 30px rgba(0, 0, 0, 0.3);
   z-index: -1;
 }

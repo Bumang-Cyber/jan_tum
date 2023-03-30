@@ -168,33 +168,110 @@ function deleteWord(event) {
   //id 대조해서 삭제하기
 }
 function modifyWord(event) {
+  const thatIconset = event.target.parentElement;
   const thatDelBtn = event.target;
+  const thatModBtn =
+    event.target.parentElement.querySelector(".new_word_Delete");
   const thatWordLayout = event.target.parentElement.parentElement.parentElement;
-  const thatWordText = null;
-  const thatWordDesc = null;
+  const thatWordText =
+    event.target.parentElement.parentElement.parentElement.querySelector(
+      ".new_word_title"
+    );
+  const thatWordDesc =
+    event.target.parentElement.parentElement.parentElement.querySelector(
+      ".new_word_Desc"
+    );
 
-  //   newText.classList.add("new_input");
-  //     newText.value = targetText.innerText;
-  //     targetText.innerText = "";
-  //     newForm.appendChild(newText);
-  //     targetDiv.appendChild(newForm);
+  const newForm = document.createElement("form");
+  const newWordText = document.createElement("input");
+  const newWordDesc = document.createElement("input");
 
-  //     newForm.addEventListener("submit", completeModifyToDo);
+  const newDelBtn = document.createElement("span");
+  newDelBtn.innerText = "Cancel";
+  newDelBtn.addEventListener("click", cancelModify);
+  const newModBtn = document.createElement("span");
+  newModBtn.innerText = "Finish";
+  newModBtn.addEventListener("click", finishModify);
+  thatIconset.appendChild(newDelBtn);
+  thatIconset.appendChild(newModBtn);
 
-  //     function completeModifyToDo(event) {
-  //       event.preventDefault();
-  //       let reNewText = newText.value;
-  //       newForm.remove();
-  //       targetText.innerText = reNewText;
-  //       let sorted = toDos.filter((item) => item.id === parseInt(targetDiv.id));
-  //       let exceptSorted = toDos.filter(
-  //         (item) => item.id !== parseInt(targetDiv.id)
-  //       );
-  //       sorted = sorted[0];
-  //       sorted.text = newText.value;
-  //       toDosIndex = toDos.indexOf(sorted, 0);
-  //       toDos[toDosIndex] = sorted;
-  //       saveToDo();
+  //css용 클래스 선언..
+  thatIconset.parentElement.classList.add("new_word_firstrow_modifying");
+  thatWordLayout.classList.add("new_word_layout_modifying");
+
+  newForm.classList.add("new_form");
+  newWordText.classList.add("new_input");
+  newWordDesc.classList.add("new_input");
+
+  newWordText.value = thatWordText.innerText;
+  newWordDesc.value = thatWordDesc.innerText;
+
+  thatWordText.classList.add("hidden");
+  thatWordDesc.classList.add("hidden");
+  thatDelBtn.classList.add("hidden");
+  thatModBtn.classList.add("hidden");
+
+  newForm.appendChild(newWordText);
+  newForm.appendChild(newWordDesc);
+  thatWordLayout.appendChild(newForm);
+
+  newForm.addEventListener("submit", finishModify);
+
+  function cancelModify() {
+    eraseLayout();
+  }
+
+  function finishModify(event) {
+    event.preventDefault();
+    console.log("submit-processing");
+    let reNewText = newWordText.value;
+    let reNewDesc = newWordDesc.value;
+
+    thatWordText.innerText = reNewText;
+    thatWordDesc.innerText = reNewDesc;
+
+    if (thatWordLayout.classList.contains("eng")) {
+      console.log("ward1");
+      let sorted = engWordList.filter(
+        (item) => item.id === parseInt(thatWordLayout.id)
+      );
+      console.log(sorted);
+      sorted = sorted[0];
+      console.log(sorted);
+      sorted.wordText = reNewText;
+      sorted.wordDesc = reNewDesc;
+      engWordListIndex = engWordList.indexOf(sorted, 0);
+      engWordList[engWordListIndex] = sorted;
+    } else {
+      console.log("ward2");
+      let sorted = jpnWordList.filter(
+        (item) => item.id === parseInt(thatWordLayout.id)
+      );
+      console.log(sorted);
+      sorted = sorted[0];
+      sorted.wordText = reNewText;
+      sorted.wordDesc = reNewDesc;
+      jpnWordListIndex = jpnWordList.indexOf(sorted, 0);
+      jpnWordList[jpnWordListIndex] = sorted;
+    }
+    eraseLayout();
+    saveLocal();
+  }
+
+  function eraseLayout() {
+    thatWordText.classList.remove("hidden");
+    thatWordDesc.classList.remove("hidden");
+    thatDelBtn.classList.remove("hidden");
+    thatModBtn.classList.remove("hidden");
+    newWordText.remove();
+    newWordDesc.remove();
+    newForm.remove();
+    newDelBtn.remove();
+    newModBtn.remove();
+
+    thatIconset.parentElement.classList.remove("new_word_firstrow_modifying");
+    thatWordLayout.classList.remove("new_word_layout_modifying");
+  }
 }
 
 function saveLocal() {

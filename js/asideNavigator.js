@@ -1,5 +1,6 @@
 const toolBox = document.querySelector(".menu_on");
 const shirnkedBox = document.querySelector(".menu_off");
+const timeMargin = document.querySelector(".time");
 
 //greeting 마진 조절용
 const greetingMargin = document.querySelector("#greeting");
@@ -31,12 +32,7 @@ function onOffIconClicked() {
   wordsIcon.classList.toggle("hidden");
   toDoIcon.classList.toggle("hidden");
   toolBox.classList.toggle("hidden");
-  if (window.innerWidth <= 1725) {
-    greetingMargin.classList.add("greeting-aside-margin");
-  } else {
-    greetingMargin.classList.remove("greeting-aside-margin");
-  }
-  //차라리 윈도우에 반응해서 줄어드는 로직으로 처리할지 고민하기
+  timeMargin.classList.toggle("time__whenSideBarShrinked");
 }
 
 function wordsIconClicked() {

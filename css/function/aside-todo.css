@@ -29,7 +29,7 @@
 .todos_area {
   display: block;
   flex-direction: column;
-  height: calc(70vh - 130px);
+  height: calc(70vh - 142px);
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -47,7 +47,7 @@
   flex-direction: column;
   align-items: center;
   box-sizing: content-box;
-  border-top: 1px solid var(--gray200);
+  border-bottom: 1px solid var(--gray200);
   position: relative;
 }
 
@@ -117,12 +117,12 @@
   accent-color: var(--gray500);
 }
 
-.todos_area::-webkit-scrollbar {
-  display: none;
-}
-
 .new_todo_div__icon_area span:hover {
   background-color: var(--gray300);
   border-radius: 2px;
   color: var(--gray500);
+}
+
+.new_todo_div:hover {
+  background-color: var(--gray100);
 }

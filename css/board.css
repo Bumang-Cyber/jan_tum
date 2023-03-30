@@ -4,7 +4,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   position: fixed;
 
   -webkit-user-select: none;
@@ -16,8 +16,8 @@ body {
 }
 
 h1 {
-  font-size: 62px;
-  font-weight: 500;
+  font-size: 148px;
+  font-weight: 600;
   letter-spacing: -1px;
   transform: translate(0, 4px);
 }
@@ -25,23 +25,23 @@ h1 {
 h2 {
   font-size: 40px;
   font-weight: 500;
-  letter-spacing: -0.8px;
+  letter-spacing: -0.2px;
 }
 
 h3 {
-  font-size: 24px;
-  font-weight: 400px;
+  font-size: 56px;
+  font-weight: 500;
   letter-spacing: -0.5px;
 }
 
 header {
-  margin: 80px auto;
-  width: 1056px;
+  margin-top: 80px;
+  margin-left: 96px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: baseline;
   box-sizing: border-box;
-  text-shadow: 0 0 80px var(--gray900);
+  text-shadow: 0 0 200px var(--black);
 }
 
 .hidden {
@@ -60,6 +60,10 @@ header {
   align-items: center;
 }
 
+.geolocation_section {
+  transform: translateY(-4px);
+}
+
 .where_user_is {
   display: flex;
   margin-top: 8px;
@@ -69,14 +73,14 @@ header {
 .city_name,
 .divider,
 .city_weather {
-  margin-right: 8px;
-  font-size: 16px;
-  font-weight: 400;
+  margin-right: 42px;
+  font-size: 32px;
+  font-weight: 300;
   letter-spacing: -0.3px;
 }
 
 .divider {
-  height: 12px;
+  height: 28px;
   width: 1px;
   background-color: var(--white);
   opacity: 0.5;
@@ -84,14 +88,17 @@ header {
 }
 
 .time {
-  margin-left: 32px;
+  position: absolute;
+  right: 388px;
+}
+
+.time__whenSideBarShrinked {
+  right: 180px;
 }
 
 #greeting {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  bottom: 200px;
 }
 
 .greeting-aside-margin {
@@ -101,40 +108,31 @@ header {
 #greeting input {
   border: none;
   font-size: 40px;
-  background-color: rgba(0, 0, 0, 0);
   text-align: right;
   color: var(--white);
 }
 
 footer {
   position: absolute;
-  bottom: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100vw;
-  position: absolute;
-  margin-bottom: 64px;
-}
-
-.quote,
-.author {
-  display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  bottom: 132px;
+  left: 96px;
+  color: var(--white);
 }
 
 .quote {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
-  text-shadow: 0 0 32px var(--gray900);
+  text-shadow: 0 0 100px var(--black);
 }
 
 .author {
-  margin-top: 16px;
+  margin-top: 12px;
   font-size: 16px;
-  font-weight: 600;
-  color: var(--gray300);
-  text-shadow: 0 0 32px var(--gray900);
+  font-weight: 400;
+  text-shadow: 0 0 100px var(--black);
 }
 
 .bgImage {

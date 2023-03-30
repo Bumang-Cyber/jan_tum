@@ -126,9 +126,7 @@ function modifyToDo(event) {
       newForm.remove();
       targetText.innerText = reNewText;
       let sorted = toDos.filter((item) => item.id === parseInt(targetDiv.id));
-      let exceptSorted = toDos.filter(
-        (item) => item.id !== parseInt(targetDiv.id)
-      );
+
       sorted = sorted[0];
       sorted.text = newText.value;
       toDosIndex = toDos.indexOf(sorted, 0);
