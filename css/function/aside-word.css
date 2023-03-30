@@ -169,15 +169,23 @@ input[type="submit"] {
 }
 
 .word_area__eng {
-  height: calc(45vh - 10px);
+  height: calc(70vh - 190px);
   overflow-y: scroll;
 }
 
 .word_area__jpn {
-  height: calc(45vh - 10px);
+  height: calc(70vh - 190px);
   overflow-y: scroll;
 }
 
 .new_word_layout:hover {
   background-color: var(--gray100);
+}
+
+.word_area__eng::-webkit-scrollbar {
+  display: none;
+}
+
+.word_area__jpn::-webkit-scrollbar {
+  display: none;
 }
