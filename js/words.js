@@ -148,15 +148,17 @@ function generateNewWordUnit(wv, dv, lt, id) {
 }
 
 function deleteWord(event) {
+  if (window.confirm("Do you want to Delete it?")) {
+  } else {
+    return;
+  }
   const thatWordLayout = event.target.parentElement.parentElement.parentElement;
 
   if (thatWordLayout.classList.contains("eng")) {
-    console.log("이건 영어");
     engWordList = engWordList.filter(
       (item) => item.id !== parseInt(thatWordLayout.id)
     );
   } else {
-    console.log("이건 일본어");
     jpnWordList = jpnWordList.filter(
       (item) => item.id !== parseInt(thatWordLayout.id)
     );

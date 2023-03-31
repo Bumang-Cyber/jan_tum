@@ -78,7 +78,12 @@ function paintToDo(newToDoObj) {
   todoListArea.prepend(newTodoDiv);
 
   //넘버링 수정 setNumberingOnTodo()
-  newTodoDiv__order.innerText = "1.";
+  let sortedToNumber = toDos.filter(
+    (item) => item.id === parseInt(newTodoDiv.id)
+  );
+  sortedToNumber = sortedToNumber[0];
+  const order = toDos.indexOf(sortedToNumber, 0);
+  newTodoDiv__order.innerText = `${order + 1}.`;
 
   function switchDone() {
     if (newTodoDiv__checkBoxSpan.innerText === "To Do") {
@@ -141,6 +146,10 @@ function modifyToDo(event) {
 }
 
 function deleteToDo(event) {
+  if (window.confirm("Do you want to Delete it?")) {
+  } else {
+    return;
+  }
   const targetDiv = event.target.parentElement.parentElement.parentElement;
   toDos = toDos.filter((item) => item.id !== parseInt(targetDiv.id));
   targetDiv.remove();
@@ -157,6 +166,6 @@ todoForm.addEventListener("submit", setNewTodo);
 
 if (savedToDos !== null) {
   const parsedToDos = JSON.parse(savedToDos);
-  parsedToDos.forEach(paintToDo);
   parsedToDos.forEach((item) => toDos.push(item));
+  parsedToDos.forEach(paintToDo);
 }
