@@ -23,8 +23,8 @@ h1 {
 }
 
 h2 {
-  font-size: 40px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 700;
   letter-spacing: -0.2px;
 }
 
@@ -98,7 +98,7 @@ header {
 
 #greeting {
   position: absolute;
-  bottom: 200px;
+  bottom: 150px;
 }
 
 .greeting-aside-margin {
@@ -117,20 +117,20 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  bottom: 132px;
+  bottom: 92px;
   left: 96px;
   color: var(--white);
 }
 
 .quote {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   text-shadow: 0 0 100px var(--black);
 }
 
 .author {
   margin-top: 12px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   text-shadow: 0 0 100px var(--black);
 }
@@ -141,4 +141,8 @@ footer {
   height: 100vh;
   z-index: -2;
   object-fit: cover;
+}
+
+#greeting:hover {
+  scale: 1.2;
 }
