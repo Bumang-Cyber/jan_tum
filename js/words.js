@@ -175,14 +175,8 @@ function modifyWord(event) {
   const thatModBtn =
     event.target.parentElement.querySelector(".new_word_Delete");
   const thatWordLayout = event.target.parentElement.parentElement.parentElement;
-  const thatWordText =
-    event.target.parentElement.parentElement.parentElement.querySelector(
-      ".new_word_title"
-    );
-  const thatWordDesc =
-    event.target.parentElement.parentElement.parentElement.querySelector(
-      ".new_word_Desc"
-    );
+  const thatWordText = thatWordLayout.querySelector(".new_word_title");
+  const thatWordDesc = thatWordLayout.querySelector(".new_word_Desc");
 
   const newForm = document.createElement("form");
   const newWordText = document.createElement("input");

@@ -109,39 +109,69 @@ function paintToDo(newToDoObj) {
 }
 
 function modifyToDo(event) {
-  count = count + 1;
-  if (count % 2 !== 0) {
-    const targetDiv = event.target.parentElement.parentElement.parentElement;
-    let targetText = targetDiv.querySelector(".new_todo_div__todo_contents");
+  const thatWordLayout = event.target.parentElement.parentElement.parentElement;
+  const thatIconset = event.target.parentElement;
+  const thatModBtn = event.target;
+  const thatDelBtn = thatIconset.querySelector(".new_todo_div__delete");
+  let targetText = thatWordLayout.querySelector(".new_todo_div__todo_contents");
 
-    const newForm = document.createElement("form");
-    const newText = document.createElement("input");
-    //새로운 인풋이 나와서 수정되는 값을 수집
-    newText.classList.add("new_input");
-    newText.value = targetText.innerText;
-    targetText.innerText = "";
-    newForm.appendChild(newText);
-    targetDiv.appendChild(newForm);
+  thatModBtn.classList.add("hidden");
+  thatDelBtn.classList.add("hidden");
 
-    newForm.addEventListener("submit", completeModifyToDo);
+  const newForm = document.createElement("form");
+  const newText = document.createElement("input");
 
-    function completeModifyToDo(event) {
-      event.preventDefault();
-      let reNewText = newText.value;
-      newForm.remove();
-      targetText.innerText = reNewText;
-      let sorted = toDos.filter((item) => item.id === parseInt(targetDiv.id));
+  const newDelBtn = document.createElement("span");
+  newDelBtn.innerText = "Cancel";
+  newDelBtn.addEventListener("click", cancelModify);
+  const newModBtn = document.createElement("span");
+  newModBtn.innerText = "Finish";
+  newModBtn.addEventListener("click", finishModify);
+  thatIconset.appendChild(newDelBtn);
+  thatIconset.appendChild(newModBtn);
 
-      sorted = sorted[0];
-      sorted.text = newText.value;
-      toDosIndex = toDos.indexOf(sorted, 0);
-      toDos[toDosIndex] = sorted;
-      saveToDo();
+  //새로운 인풋이 나와서 수정되는 값을 수집
+  newText.classList.add("new_input");
+  newText.value = targetText.innerText;
+  const cancelText = targetText.innerText;
+  targetText.innerText = "";
+  newForm.appendChild(newText);
+  thatWordLayout.appendChild(newForm);
 
-      count = count + 1;
-    }
-  } else {
-    count = count + 1;
+  newForm.addEventListener("submit", finishModify);
+
+  function cancelModify() {
+    targetText.innerText = cancelText;
+    thatModBtn.classList.remove("hidden");
+    thatDelBtn.classList.remove("hidden");
+    newDelBtn.remove();
+    newModBtn.remove();
+
+    newForm.remove();
+    newText.remove();
+  }
+
+  function finishModify(event) {
+    event.preventDefault();
+    let reNewText = newText.value;
+
+    newForm.remove();
+    newDelBtn.remove();
+    newModBtn.remove();
+
+    thatModBtn.classList.remove("hidden");
+    thatDelBtn.classList.remove("hidden");
+
+    targetText.innerText = reNewText;
+    let sorted = toDos.filter(
+      (item) => item.id === parseInt(thatWordLayout.id)
+    );
+
+    sorted = sorted[0];
+    sorted.text = newText.value;
+    toDosIndex = toDos.indexOf(sorted, 0);
+    toDos[toDosIndex] = sorted;
+    saveToDo();
   }
 }
 
@@ -150,9 +180,9 @@ function deleteToDo(event) {
   } else {
     return;
   }
-  const targetDiv = event.target.parentElement.parentElement.parentElement;
-  toDos = toDos.filter((item) => item.id !== parseInt(targetDiv.id));
-  targetDiv.remove();
+  const thatWordLayout = event.target.parentElement.parentElement.parentElement;
+  toDos = toDos.filter((item) => item.id !== parseInt(thatWordLayout.id));
+  thatWordLayout.remove();
   saveToDo();
 }
 
