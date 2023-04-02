@@ -109,6 +109,8 @@ header {
 }
 
 #greeting input {
+  width: 203px;
+  height: 24px;
   background-color: transparent;
   border: none;
   font-size: 24px;
@@ -157,4 +159,5 @@ h3:hover,
 #greeting:hover {
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 5%;
+  border-bottom: 2px solid var(--white);
 }

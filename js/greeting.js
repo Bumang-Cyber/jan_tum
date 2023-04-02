@@ -27,8 +27,15 @@ function paintName() {
   } else {
     hello = "Sweet Dream";
   }
-
   sayHelloName.innerText = `${hello}, ${localSavedName}`;
+  sayHelloName.classList.remove("hidden");
+}
+
+function modifyName() {
+  sayHelloName.classList.add("hidden");
+  nameForm.classList.remove("hidden");
+  nameInput.value = localSavedName;
+  nameForm.addEventListener("submit", saveName);
 }
 
 if (localSavedName === null) {
@@ -39,4 +46,4 @@ if (localSavedName === null) {
   paintName();
 }
 
-setInterval(paintName, 1000);
+greeting.addEventListener("click", modifyName);
