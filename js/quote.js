@@ -82,6 +82,10 @@ const quotes = [
       "지금부터 20년 후에는 너는 네가 한 일보다 하지 않은 일 때문에 더욱 실망하게 될 것이다. 그러므로 돛을 올려라.",
     author: "마크 트웨인",
   },
+  {
+    quote: "하루하루는 성실하게, 인생 전체는 되는대로.",
+    author: "이동진",
+  },
 ];
 
 const quote = document.querySelector("footer .quote");
